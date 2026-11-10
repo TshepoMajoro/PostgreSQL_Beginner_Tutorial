@@ -92,3 +92,12 @@ would be the primary key of the customers table (a.k.a the 'one' side).
 that is consistently changing values.
 
 */
+
+/*
+Explain the difference between a primary key and a foreign key. 
+Give one example of each from BrightMart.
+- A primary key uniquely identifies a table record, and it can never be null. For example, the customer_id field of the Customers table.
+- On the other hand, a foreign key is a column that serves as a primary key in a different
+database table and it is used to establish a link/relationship between the 2 tables.
+For example, the customer_id field in the Orders table.
+*/
