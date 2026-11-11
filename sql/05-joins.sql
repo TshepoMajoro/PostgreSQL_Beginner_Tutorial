@@ -97,3 +97,15 @@ select
 from orders as o
 right join customers as c
 on o.customer_id = c.customer_id;
+
+/*
+4. Show order ID, customer email, product name and quantity.
+*/
+SELECT o.order_id,c.email,p.product_name,oi.quantity
+FROM orders AS o
+INNER JOIN customers AS c
+ON o.customer_id = c.customer_id
+INNER JOIN order_items AS oi
+ON o.order_id = oi.order_id
+INNER JOIN products AS p
+ON oi.product_id = p.product_id;
