@@ -100,9 +100,19 @@ limit 2;
 /*
 5. Calculate the total value of each order.
 */
-
+select
+	order_id,
+	SUM(quantity * unit_price) as total_order_value
+from order_items
+group by order_id;
 
 /*
 6. Find orders with a total value greater than R500.
 */
+select
+	order_id,
+	SUM(quantity * unit_price) as total_order_value
+from order_items
+group by order_id
+having SUM(quantity * unit_price) > 500;
 
